@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-api
+spec:
+  selector:
+    matchLabels:
+      name: app-api-service  
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: app-api-service
+    spec:
+      containers:
+        - name: api-service
+          image: vishnuprasadvv/go:restapi
+          ports:
+            - containerPort: 8080
