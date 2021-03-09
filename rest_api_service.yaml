@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     name: app-api-service
-  name: xelerate
+  name: app-api
 spec:
   selector:
     name: app-api-service 
